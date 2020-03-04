@@ -1,0 +1,22 @@
+{
+  "name": "elementcartdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aloha1604/ElementCartDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aloha1604/ElementCartDemo/issues"
+  },
+  "homepage": "https://github.com/aloha1604/ElementCartDemo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

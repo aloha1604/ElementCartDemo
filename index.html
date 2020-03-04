@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello word</h1>
+    <button onclick="onDeclarativeClick()">DeclarativeClick</button>
+    <button onclick="onImperativeClick()">ImperativeClick</button>
+    <input id="checkbox" type="checkbox">
+    <script>
+        //ImperativeClick
+        const onImperativeClick = () =>{
+            const checkbox = document.getElementById("checkbox");
+            const idChecked = checkbox.checked;
+            checkbox.checked = !idChecked;
+        };
+
+
+        //DeclarativeClick
+
+        let state = {
+            isCheckedboxChecked : false
+        }
+
+        const setState = (newState)=>{
+            state = newState;
+            notifyChanged(newState);
+        }
+        const notifyChanged = (newState)=>{
+            const checkbox = document.getElementById("checkbox");
+            checkbox.checked = newState.isCheckedboxChecked;
+        }
+        const onDeclarativeClick=()=>{
+            setState({isCheckedboxChecked:!state.isCheckedboxChecked});
+        }
+
+    </script>
+   <!-- <script type="module" src="./js/main.js"></script>
+   <script type="module" src="./js/store.js"></script> -->
+</body>
+</html>
